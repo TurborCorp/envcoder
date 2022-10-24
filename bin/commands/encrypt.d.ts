@@ -1,1 +1,1 @@
-export declare const encryptFile: (fileName: string) => Promise<void>;
+export declare const encryptFile: (fileName: string) => void;

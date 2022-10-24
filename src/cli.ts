@@ -1,23 +1,19 @@
 #!/usr/bin/env node
 
-import yargs from 'yargs';
-import { hideBin } from 'yargs/helpers';
-import {encryptFile} from "./commands/encrypt";
+import { encryptFile } from "./commands/encrypt";
+import { decryptFile } from "./commands/decrypt";
 
 const { createCommand } = require('commander');
 const program = createCommand();
 
-program.command('encrypt <fileName>')
+program.command('encrypt')
+    .argument("<fileName>")
     .description('Encrypt file')
     .action(encryptFile);
 
+program.command('decrypt')
+    .description('Decrypt file')
+    .action(decryptFile);
+
 program.parse()
 
-yargs(hideBin(process.argv))
-    // Use the commands directory to scaffold.
-    .commandDir('commands')
-    // Enable strict mode.
-    .strict()
-    // Useful aliases.
-    .alias({ h: 'help' })
-    .argv;
