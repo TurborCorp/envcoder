@@ -16,7 +16,7 @@
     "url": "git+https://github.com/TurborCorp/envcoder.git"
   },
   "author": "Roman Cold",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/TurborCorp/envcoder/issues"
   },
