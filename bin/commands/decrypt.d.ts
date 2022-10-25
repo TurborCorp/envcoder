@@ -1,1 +1,1 @@
-export declare const decryptFile: () => void;
+export declare const decryptFile: (fileNamePub: string, fileNameKey: string) => void;
