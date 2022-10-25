@@ -1,3 +1,8 @@
 .idea
-/node_modules
-secret.key
+node_modules/
+private.key
+secret.pub
+dev.json
+development.json
+.env
+/bin/

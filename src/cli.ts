@@ -1,23 +1,30 @@
 #!/usr/bin/env node
 
-import yargs from 'yargs';
-import { hideBin } from 'yargs/helpers';
-import {encryptFile} from "./commands/encrypt";
+import { encryptFile } from './commands/encrypt';
+import { decryptFile } from './commands/decrypt';
+import { dataToEnv } from './commands/env';
 
 const { createCommand } = require('commander');
 const program = createCommand();
 
-program.command('encrypt <fileName>')
-    .description('Encrypt file')
-    .action(encryptFile);
+program
+  .command('encrypt')
+  .argument('<fileName>', 'Data which you want to be encrypted')
+  .description('Encrypt file')
+  .action(encryptFile);
 
-program.parse()
+program
+  .command('decrypt')
+  .argument('<fileNamePub>', 'Data that was encrypted')
+  .argument('<fileNameKey>', 'Key which was used to encrypt the file')
+  .description('Decrypt file')
+  .action(decryptFile);
 
-yargs(hideBin(process.argv))
-    // Use the commands directory to scaffold.
-    .commandDir('commands')
-    // Enable strict mode.
-    .strict()
-    // Useful aliases.
-    .alias({ h: 'help' })
-    .argv;
+program
+  .command('env')
+  .option('-f, --file <fileName>', 'Data from local file')
+  .option('-u, --url <urlName>', 'Data from URL')
+  .requiredOption('-s, --secret <fileNameKey>', 'File with secret key')
+  .action(dataToEnv);
+
+program.parse();
