@@ -7,6 +7,9 @@ import { dataToEnv } from './commands/env';
 const { createCommand } = require('commander');
 const program = createCommand();
 
+/**
+ * Commands
+ */
 program
   .command('encrypt')
   .argument('<fileName>', 'Data which you want to be encrypted')
