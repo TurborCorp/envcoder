@@ -16,7 +16,9 @@ export const dataToEnv = (data: ParamsData) => {
     throw new Error('Invalid secret key');
   }
   const envFile = fs.createWriteStream(join(process.cwd(), '.env'));
-  const fileSecretKey = fs.readFileSync(join(process.cwd(), `${data.secret}`), 'utf8');
+  const fileSecretKey = process.env.ENV_SECRET_KEY
+    ? process.env.ENV_SECRET_KEY
+    : fs.readFileSync(join(process.cwd(), `${data.secret}`), 'utf8');
   if (data.file !== undefined) {
     const filePub = JSON.parse(fs.readFileSync(join(process.cwd(), `${data.file}`), 'utf8').toString());
     const decryptedData = decryptData(filePub.data, fileSecretKey);
