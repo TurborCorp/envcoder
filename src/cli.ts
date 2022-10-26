@@ -3,12 +3,13 @@
 import { encryptFile } from './commands/encrypt';
 import { decryptFile } from './commands/decrypt';
 import { dataToEnv } from './commands/env';
+import { jsonToEnv } from './commands/json';
 
 const { createCommand } = require('commander');
 const program = createCommand();
 
 /**
- * Commands
+ * Комманды
  */
 program
   .command('encrypt')
@@ -28,6 +29,14 @@ program
   .option('-f, --file <fileName>', 'Data from local file')
   .option('-u, --url <urlName>', 'Data from URL')
   .requiredOption('-s, --secret <fileNameKey>', 'File with secret key')
+  .description('Decrypt file and convert to .env')
   .action(dataToEnv);
+
+program
+  .command('json')
+  .option('-f, --file <fileName>', 'Data from local file')
+  .option('-u, --url <urlName>', 'Data from URL')
+  .description('Convert .json file to .env')
+  .action(jsonToEnv);
 
 program.parse();

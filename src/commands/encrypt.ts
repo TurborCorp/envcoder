@@ -2,11 +2,18 @@ import * as fs from 'fs';
 import * as CryptoJS from 'crypto-js';
 import { v4 as uuidv4 } from 'uuid';
 
+/**
+ * Вид хранения зашифрованного JSON файла
+ */
 export interface JsonSerialization {
   data: string;
   createDate: number;
 }
 
+/**
+ * Шифрование файла
+ * @param {String} fileName - файл, который требуется зашифровать
+ */
 export const encryptFile = (fileName: string) => {
   try {
     const newFileName = fileName.split('.');
