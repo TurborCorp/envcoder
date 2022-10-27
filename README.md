@@ -113,3 +113,11 @@ MONGO_DATABASE=example_db
 MONGO_ROOT_USER=root
 MONGO_ROOT_PASSWORD=root
 ```
+
+## Author
+
+[Roman Cold](https://github.com/Cold927)
+
+## License
+
+EnvCoder is [MIT licensed](LICENSE)
