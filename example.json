@@ -1,0 +1,17 @@
+{
+  "node": {
+    "env": "development"
+  },
+  "mongo": {
+    "host1": "127.0.0.1",
+    "port1": "8000",
+    "replica": false,
+    "user": "user",
+    "password": "password",
+    "database": "example_db",
+    "root": {
+      "user": "root",
+      "password": "root"
+    }
+  }
+}
