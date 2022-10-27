@@ -1,7 +1,14 @@
 {
   "name": "envcoder",
-  "version": "1.0.7",
-  "description": "",
+  "version": "1.0.8",
+  "description": "Package, that allows you to encrypt, decrypt, convert your .json to .env file",
+  "keywords": [
+    "env",
+    "convert",
+    "url",
+    "decrypt",
+    "encrypt"
+  ],
   "main": "./bin/cli.js",
   "bin": {
     "envcoder": "./bin/cli.js"
