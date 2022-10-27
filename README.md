@@ -5,7 +5,7 @@ Package, that allows you to encrypt, decrypt, convert your `.json` to `.env` fil
 ## Features
 
 - Encrypt `.json` with unique generated key
-- Decrypt `.json` from file to 
+- Decrypt your data back to the original `.json` file 
 - Convert `.json` file with variables to `.env`
 - Parse data `.json` file from URL to `.env`
 
