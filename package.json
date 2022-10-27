@@ -1,6 +1,6 @@
 {
   "name": "envcoder",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "",
   "main": "./bin/cli.js",
   "bin": {

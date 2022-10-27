@@ -1,4 +1,7 @@
 # EnvCoder
+[![NPM Version](http://img.shields.io/npm/v/commander.svg?style=flat)](https://www.npmjs.org/package/commander)
+[![Package License](https://img.shields.io/badge/license-MIT-green)](https://www.npmjs.org/package/envcoder)
+[![Install Size](https://packagephobia.com/badge?p=envcoder)](https://packagephobia.com/result?p=envcoder)
 
 Package, that allows you to encrypt, decrypt, convert your `.json` to `.env` file
 
