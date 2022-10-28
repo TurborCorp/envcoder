@@ -1,6 +1,6 @@
 {
   "name": "envcoder",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Package, that allows you to encrypt, decrypt, convert your .json to .env file",
   "keywords": [
     "env",
