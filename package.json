@@ -1,6 +1,6 @@
 {
   "name": "envcoder",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Package, that allows you to encrypt, decrypt, convert your .json to .env file",
   "keywords": [
     "env",
@@ -37,8 +37,7 @@
     "prettier": "^2.7.1",
     "rimraf": "^3.0.2",
     "tslib": "^2.4.0",
-    "uuid": "^9.0.0",
-    "yargs": "^17.6.0"
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
     "@types/cli-color": "^2.0.2",
